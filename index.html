@@ -41,7 +41,9 @@
 					<li>I expected this to be more of a "control" answer, since single-family homes are normally far more expensive than 
 						multi-family homes, and hence less affordable for lower-income residents. Hence, I expected to see a negative 
 						correlation between the percentage of land reserved for single-family housing and the percentage of lower-income 
-						households residing in the municipality. I hoped to use the results of this question's corresponding visualizations
+						households residing in the municipality. Of course, this ignores the presence of low-income affordable housing,
+						but given that there are not many such units (as discussed in previous weeks), I figured that there would not be
+						too much of an impact on the data. I hoped to use the results of this question's corresponding visualizations
 						to inform how statistically significant the other results are.</li>
 				</ul>
 			</ol>
@@ -103,7 +105,16 @@
 			<figure>
 				<img src="black.png" alt="" />
 				<figcaption>
-				This is the first of the visualizations aiming to answer my second question.
+				This is the first of the visualizations aiming to answer my second question. While I eventually settled on analyzing
+				the impact of reserving more single-family housing on minority populations, my first thought after watching Dain's video
+				had been about the impact on Black residents because of the second wave of zoning exclusions at the height of the Civil
+				Rights movement. Afterward, I felt that analyzing different population groups would would help form a more conclusive
+				answer to my initial question. I would also like to note that there were two outliers in the dataset with a disproportionately
+				higher percentage of Black residents (Randolph with 44.8549% and Stoughton with 15.6475%) which caused the reduced the
+				granularity of the remaining data. As a result, I chose to exclude them from the plot, however, Randolph had 97.7813% of its
+				land reserved for single-family housing and Stoughton had 43.8257%, compared to the metro-wide average of 55.3768%. At first,
+				the data appeared to reveal no apparent correlation, but adding a line of best fit indicated a slight positive correlation
+				between the percentage of land reserved for single-families in a municipality and their Black population (R^2 = 0.0057).
 				</figcaption>
 			</figure>
 
@@ -122,30 +133,53 @@
 			</figure>
 
 			<figure>
-				<img src="ratios.png" alt="" />
+				<img src="white.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+					Since I was viewing zoning through the lens of race, it made sense to repeat my previous process but with White 
+					residents. In this case, there appeared to be limited correlation between the percentage of White people living 
+					in Boston metro municipalities and the percentage of land zoned to single-family housing. In fact, the R^2 value 
+					with linear regression was merely 0.0004%. While the polynomial of best fit (cubic) had a higher R^2 value (0.1058), 
+					it appeared to overfit the data, in finding a minima (since the municipalities with around 50% White residents have 
+					varying percentages of land zoned for single-family housing). A possible reason for this is the relatively large
+					(and uniform) percentage of White residents in the Boston metro area (we can see that the scatter plot might have
+					two nearly horizontal lines of best fit, one through the high 90% and one through the 50s).
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="latinx.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Since people who identify as Hispanic or Latino have historically experienced significant discrimination in the United
+				States, I was curious to see how the corresponding graph would compare to those of Black and White residents in the
+				Boston metro area. The Hispanic population percentage appeared to be slightly larger than the Black population percentage
+				(This is also evident, since the slope of the line of best fit is steeper) and a higher R^2 value (0.0163), though once
+				again, this value may be too small to pinpoint a correlation.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="minorities.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Finally, this figure attempts to show the effect of reserving single-family housing on minority population in the
+				Boston metro area. In this case, I defined "minority" as any non-White population (which is a little tricky, since
+				I included multiracial residents, but since that population is one of the smallest discussed here, the results are
+				hopefully still relevant). The line of best fit pictured is the steepest of the other groups discussed, suggesting
+				that there is a larger increase in percentage of minority population with an increase in percentage of land zoned for
+				single-family housing. However, the R^2 value, in a similar vein to the others, is merely 0.0728, though this number is
+				the highest of the four, perhaps suggesting that combining all minority groups reduces outliers.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="income.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				According to the Boston Globe (one of the readings from A1), the median salary in Boston is around $86,000 and a Google search
+				highlights that the average household income is around $95,000. Because the data set provided income data in increments of $100,000, I
+				decided to use the less than 100,000 category to denote the "low-income" households in Boston (though of course, $100,000 is
+				quite different from $86,000). The data suggested a slight negative correlation between the percentage of lower-income households
+				and the percentage of land zoned to single-family housing, though the correlation (R^2) is lower than I had expected (0.0492), less
+				than the correlation between the minority population and single-family housing land, leading me to believe that there are additional
+				factors that I had not considered when originally creating my hypothesis.
 				</figcaption>
 			</figure>
 		</section>
@@ -153,7 +187,21 @@
 		<section>
 			<h2>Summary</h2>
 
-			<p>WRITE FINAL SUMMARY HERE.</p>
+			<p>I enjoyed learning about and exploring the impact of single-family zoning (a topic I did not know much about before this assignment) 
+				on various populations. My biggest takeaway (besides Tableau having a steep learning curve) is that the quality of your
+				visualizations and results will only be as good as the completeness of your dataset. I used a combination of the two datasets
+				provided for the zoning subtheme, and both had incomplete columns and/or data that lacked granularity, because of which, my 
+				results did not have the confidence that I expected them to have.
+
+				I also found myself making many assumptions and taking several creative liberties (articulated throughout the captions) 
+				that underscored our discussion during reading group regarding the influence of the author's perspective and the 
+				subjectiveness of visualizations on the whole. Perhaps including certain data points or using different trend lines
+				could have altered my results and how they are perceived.
+
+				Finally, I realized that I still do not have a complete understanding of the issues surrounding zoning--in light of the results,
+				my initial questions appeared too simplistic, but I am excited to keep learning more about this subtheme and others to form 
+				a more nuanced perspective.
+			</p>
 		</section>
 	</main>
 </body>
