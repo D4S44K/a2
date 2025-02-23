@@ -36,7 +36,14 @@
 						the amount of reserved land for single-family homes in the 60s extended to present day and whether those motivations
 						 remained confined to Black residents or extended to all minorities.</li>
 				</ul>
-				<li>How does the percentage of non-single-family homes available in a municipality lend itself to housing lower-income residents?</li>
+				<li>How does the percentage of reserved single-family homes in a municipality affect the income distribution of its residents?</li>
+				<ul>
+					<li>I expected this to be more of a "control" answer, since single-family homes are normally far more expensive than 
+						multi-family homes, and hence less affordable for lower-income residents. Hence, I expected to see a negative 
+						correlation between the percentage of land reserved for single-family housing and the percentage of lower-income 
+						households residing in the municipality. I hoped to use the results of this question's corresponding visualizations
+						to inform how statistically significant the other results are.</li>
+				</ul>
 			</ol>
 		</section>
 
@@ -46,14 +53,31 @@
 			<figure>
 				<img src="distance_default.png" alt=""/>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				The figure above visualizes the Boston metro area and the percentage of space designated for single-family homes 
+				in each municipality in the area. The darker the municipality is colored, the more space is reserved. We can see 
+				that the most of the furthest areas from Boston (the one labeled municipality on the map) are the lightest color, 
+				however, the closest areas are the same lightest color. From the legend, we can see that this lightest color 
+				corresponds to a reservation percentage range of 0-5%. Indeed, after studying the raw data, we realize that many 
+				of these municipalities do not have data on the reservation of single-family homes, so it is difficult to get a 
+				full picture of its relationship with the distance of the municipality from Boston. As a result, I decided to 
+				create a filter to remove the cities without any data to get a better idea of the results. 
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="distance_with_data.png" alt="" />
 				<figcaption>
-					ENTER IMAGE CAPTION HERE.
+					Before discussing the figure, I want to note an important assumption that I made--I considered 0.00% of land 
+					reserved to single-family housing to be equivalent to a lack of data, particularly after making the other 
+					visualizations and noticing the incompleteness of the dataset. Adding the 0.00% data points paints a different 
+					picture, as we see in the previous figure, but once we remove the municipalities with no data (of which Boston is one), 
+					we notice that the municipalities closest to Boston reserve a large amount of land for single-family homes, but not 
+					as much as those slightly further. Finally, the furthest areas from Boston downtown tend to have the least amount 
+					of land reserved for single-family housing. I thought that this unusual finding corroborated with Amy Dain's analysis 
+					of zoning's use as a tool of race and class exclusion in the mid-century. People migrating from the Boston municipality 
+					generally looked to surrounding areas. The reports of the municipalities that were a little further from Boston downtown
+					indicated a desire to preserve a quieter, more sparse ambience and cared less about the fiscal advantages of building 
+					multi-family homes. The figure suggests that those trends persist 75 years later. 
 				</figcaption>
 			</figure>
 
@@ -66,14 +90,20 @@
 					Through this train of thought and with the availability of some MBTA-related data in the Zoning dataset, 
 					I began to wonder if a municipality's accessability to MBTA transportation affected the percentage of 
 					lower family homes, since someone able to afford a single-family home would be able to afford a car and 
-					need to rely less on public transportation.
+					need to rely less on public transportation. However, as the figure indicates, only two of the Boston metro
+					municipalities appear to have MBTA access (and/or the census data is incomplete, which is the more likely
+					theory because of the well-connectedness of the T in the areas surrounding Boston). Boston is also indicated
+					as having MBTA access per the raw data but is excluded from this map because of its lack of data regarding
+					the percentage of land designated for single-family housing. With the general lack of data, I do not think
+					that any meaningful conclusions can be drawn regarding the effect of access to the MBTA and the percentage
+					of land devoted to single-family housing.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="black.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE. 
+				This is the first of the visualizations aiming to answer my second question.
 				</figcaption>
 			</figure>
 
@@ -83,7 +113,11 @@
 					Once I made the original graph and didn't immediately see any trends, I started wondering about the direction
 					of the relationship I was asking about. Did the percentage of land being zoned to single family homes affect
 					the number of Black people living in the municipality or vice versa? The reversed axes form the relation
-					suggested by the zoning policies in the 60s, but perhaps that relation also exists in present day.
+					suggested by the zoning policies in the 60s, but perhaps that relation also exists in present day. While the
+					data remains exactly the same between the two visualizations, I wanted to include the latter in this report to 
+					challenge my initial notion of the percentage of single-family homes <it>causing</it> a reduced relative Black 
+					population by altering the axes to reflect the traditional perception of the x-axis as the "independent" 
+					variable and the y-axis as the "dependent" variable.
 				</figcaption>
 			</figure>
 
